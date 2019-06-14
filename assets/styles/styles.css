@@ -1,0 +1,15 @@
+
+div.jumbotron{
+    background-image: url("../images/cinema.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.display-4{
+    color: white;
+    font-weight: bold;
+}
+
+ul{
+list-style: none;
+}
