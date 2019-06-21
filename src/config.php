@@ -19,3 +19,6 @@ $db = new MySQLDB('mysql:host=localhost;dbname=sakila','root','');
 
 $movieService = new MovieRepository($db);
 
+$userService = new UserRepository($db);
+
+$userRegister = new UserRegister($userService,$db);

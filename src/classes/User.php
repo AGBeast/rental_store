@@ -2,9 +2,7 @@
 
 class User extends MySQLDB
 {
-    //table name
-    private $table_name = "users";
-
+   
     protected $first_name;
     protected $last_name;
     protected $username;
@@ -20,12 +18,12 @@ class User extends MySQLDB
         $this->first_name = $first_name;
         $this->last_name = $last_name;
         $this->username  = $username;
-        $this->hashed_password = $this->setHashedPassword($password);
+        $this->hashed_password = password_hash($password, PASSWORD_DEFAULT);
     }
 
     public function setHashedPassword($password)
     {
-        $this->hashed_password = password_hash($password, PASSWORD_BCRYPT);
+        $this->hashed_password = password_hash($password, PASSWORD_ARGON2I);
     }
 
     public function verifyPassword($password)

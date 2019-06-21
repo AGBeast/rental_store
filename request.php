@@ -9,7 +9,7 @@ $categories = $movieService->movieCategories();
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Movie - <?php echo $film['title'] ?></title>
+        <title>Requests</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
     </head>
@@ -42,14 +42,26 @@ $categories = $movieService->movieCategories();
             ?>
             </div>
         </div>
-        <div class="form-group row">
-            <label for="movieRating">Movie Rating</label>
+        <fieldset class="form-group">
+            <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">Rating</legend>
             <div class="col-sm-10">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" value="G"><label for="inputradio">Rated "G"</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="ratingRadio1" value="PG">
+                        <label class="form-check-label" for="ratingRadio1">PG</label>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="ratingRadio2" value="PG-13">
+                        <label class="form-check-label" for="ratingRadio1">PG-13</label>
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+        
             
         
     </form>
